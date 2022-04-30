@@ -1,4 +1,4 @@
-Learn flexbox. 
+Section to learn flexbox. 
 
 ## Resources
 
