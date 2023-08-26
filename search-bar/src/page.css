@@ -3,10 +3,6 @@ body{
   font-family: sans-serif;
 }
 
-svg {
-    color : "red";
-}
-
 .search {
   width: 100%;
   position: relative;
@@ -15,34 +11,65 @@ svg {
 
 .searchTerm {
   width: 100%;
-  border: 3px solid #00B4CC;
+  background: #fff;
+  border: 1px solid #00B4CC;
   border-right: none;
   padding: 5px;
   height: 100%;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #9DBFAF;
   font-size: 14px;
+  border-radius: 5px 0 0 5px;
 }
 
-.searchTerm:focus{
-  color: #00B4CC;
+.searchTerm:focus {
+    outline: none;
 }
 
+/* https://stackoverflow.com/questions/22252472/how-can-i-change-the-color-of-an-svg-element */
 .searchButton {
-  width: 40px;
+  width: 35px;
+  background: #fff;
   border: 1px solid #00B4CC;
-  background: #00B4CC;
+  border-left: none;
   text-align: center;
-  color: #fff;
+  color: black; /* color of the svg element */
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
 
+
+.searchButton:focus {
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  color: white;
+  outline: none;
+}
+
+.searchButton:hover {
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  color: white;
+}
+
 .wrap{
-  width: 30%;
+  width: 40%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes */
+#SearchRect {
+  stroke: currentcolor;
+  fill: white;
+  stroke-width: 1.5;
+}
+
+.searchButton:hover #SearchRect{
+  fill: #00B4CC;
+}
+
+.searchButton:focus #SearchRect{
+    fill: #00B4CC;
+}
+
